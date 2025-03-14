@@ -77,5 +77,10 @@ app.use((error,req,res,next)=>{
     res.render('error');
 })
 
+const host = '0.0.0.0';
+const port = process.env.PUERTO;
+
 // When an error is found , it should be the first param in the middleware
-app.listen(process.env.PUERTO);
+app.listen(port, host, () => {
+    console.log('Server is running');
+});
