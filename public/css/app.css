@@ -1,0 +1,680 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/* #4B1E6A 1C1B22 */
+body {
+    background: linear-gradient(to bottom, #102A3E, #1B425E);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+}
+p {
+    font-size: 1.6rem;
+}
+/** Globales **/
+h1, h2, h3  {
+    color: #E0F2FE ;
+    margin: 0;
+}
+h1 {
+    font-weight: 900;
+    font-size: 6rem;
+}
+h2 {
+    font-weight: 700;
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+h3 {
+    font-size: 2.8rem;
+    margin-top: 10px;
+}
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.separador {
+    padding-bottom: 2rem;
+    padding-top:2rem;
+    border-bottom: 1px solid #267593  ;
+}
+/** Botones **/
+.btn {
+    font-size: 1.8rem;
+    padding: 1.4rem 6rem;
+    border-radius: .6rem;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color .3s ease-out;
+    display: block;
+    border:none;
+}
+.btn-verde {
+    background-color: #00A17B;
+}
+.btn-verde:hover {
+    background-color: #008A6A;
+}
+
+.btn-azul {
+    background-color: #008A98;
+}
+.btn-azul:hover {
+    background-color: #007482;
+}
+
+.btn-teal {
+    background-color: #4DB6AC;
+}
+
+.btn-teal:hover {
+    background-color: #3E9A8A;
+}
+
+.btn-amarillo {
+    background-color: #E69A50;
+}
+.btn-amarillo:hover {
+    background-color: #CC8745;
+}
+
+.btn-rojo {
+    background-color: #B0003A;
+}
+.btn-rojo:hover {
+    background-color: #90002F;
+}
+
+.btn-morado {
+    background-color: #7E57C2;
+}
+.btn-morado:hover {
+    background-color: #6A47A0;
+}
+
+.btn-naranja {
+    background-color: #FF7043;
+}
+
+.btn-naranja:hover {
+    background-color: #FF5722;
+}
+
+.btn-gris {
+    background-color: #64748B;
+}
+.btn-gris:hover {
+    background-color: #505C72;
+}
+
+.cerrar-sesion {
+    display: flex;
+    align-items: center;
+    margin-top: 0; 
+}
+
+.cerrar-sesion .btn {
+    font-size: 1.3rem;
+    padding: 1.4rem;
+    margin: 8px 12px 0 0.5rem; 
+    display: inline-block; 
+    color:white;
+}
+
+.editar-btn {
+    margin-top: 4rem;
+}
+.editar-btn {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+#editar-vacante{
+    padding: 1.4rem 3rem;
+    width: 35%;
+}
+
+/** Header **/
+.tagline {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin: 2rem 0 3rem 0;
+}
+
+
+.site-header {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+/* Menu - Top */
+#top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.menu-items {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.menu-items.logged-in {
+    display: flex; /* Contrae el menú si está logueado */
+}
+
+.menu-items.logged-out {
+    display: flex;
+}
+
+.menu-items.active {
+    display: flex !important;
+}
+
+@media (max-width: 768px) {
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .menu-items.active {
+        display: flex;
+    }
+}
+
+.nombre-sitio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+    margin-top: 3rem;
+}
+.nombre-sitio a {
+    color: white;
+    text-decoration: none;
+}
+.buscador {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+.buscador form {
+    flex:1;
+    position: relative;
+}
+@media (min-width: 768px) {
+    .buscador form {
+        flex: 0 0 40%;
+    }
+}
+.buscador input[type="text"] {
+    background-color: rgba(255,255,255,.1);
+    width: 100%;
+    border: none;
+    padding: .5rem 4rem .5rem 1rem;
+    height: 4.5rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.2rem;
+}
+.buscador input[type="submit"] {
+    display: block;
+    text-indent: -9999px;
+    height: 27px;
+    width:27px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-image: url(../img/lupa.png);
+    background-color: transparent;
+    border: none;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.buscador input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+@media (min-width:768px) {
+    .candidato,
+    .vacante {
+        display: flex;
+    }
+    .caja {
+        flex: 1;
+    }
+    .caja:first-of-type{
+        flex: 2;
+    }
+}
+
+.candidato {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Add gap between elements */
+    padding: 3rem 0;
+    border-bottom: 1px solid #267593;
+}
+
+.candidato-horizontal {
+    display: flex;
+    flex-direction: row; /* Ensure elements are displayed in a row */
+    gap: 2rem; /* Adjust gap as needed */
+    flex-wrap: wrap;
+}
+
+
+.candidato,
+.vacante {
+    padding: 3rem 0;
+    border-bottom: 1px solid #267593;
+}
+.candidato,
+.vacante:last-of-type{
+    border:none;
+}
+.caja {
+    padding: .5rem 0;
+    margin-bottom: 1rem;
+}
+.caja p {
+    color: #ffffff;
+}
+.contrato {
+    text-transform: capitalize;
+}
+.caja .puesto,
+.caja .etiqueta {
+    font-weight: 700;
+    color: #8094A3;
+    font-size: 2.6rem;
+    margin:0;
+    text-align: left;
+}
+
+#caja {
+    flex: 1; /* Hace que cada caja ocupe el mismo espacio */
+    min-width: 200px; /* Ajusta este valor según sea necesario */
+}
+
+.caja .nombre { 
+    font-size: 2.4rem; 
+    margin: .5rem 0; 
+    text-align: left;
+}
+.caja .btn {
+    text-align: center;
+}
+
+
+.centrar-vertical{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.centrar-horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+.vacante-contenedor h2 {
+    color: #8094A3;
+    font-size: 2.4rem;
+}
+.contenido-superior {
+    margin-bottom: 6rem;
+}
+@media (min-width:768px){
+    .vacante-contenedor {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .vacante-contenedor main{
+        flex: 0 0 60%;
+    }
+    .vacante-contenedor aside {
+        flex: 0 0 calc(40% - 2rem);
+    }
+}
+.vacante-descripcion h1 {
+    line-height: 1.4;
+}
+.vacante-descripcion *{
+    color: white!important;
+    line-height: 2.2;
+}
+.skills {
+    color: white;
+}
+.skills li,
+.vacante-descripcion div  {
+    font-size: 1.8rem;
+    line-height: 2.4;
+}
+
+.enviar-datos h2 {
+    font-size: 4rem;
+    color: white;
+}
+.enviar-datos p {
+    color: white;
+    font-size: 1.8rem;
+}
+.enviar-datos form {
+
+}
+
+/** Iniciar Sesión **/
+.default-form {
+    max-width: 800px;
+    margin: 4rem  auto 0 auto; 
+}
+.default-form h3 {
+    color: #8094A3;
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    
+}
+.default-form .campo {
+    margin-bottom: 3rem;
+    display: flex;   
+}
+.default-form label {
+    padding-top: 1rem;
+    flex: 0 0 18rem;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.default-form input[type="email"],
+.default-form input[type="password"],
+.default-form input[type="text"],
+.default-form input[type="number"],
+.default-form input[type="file"],
+.default-form input[type=tel],
+.default-form select,
+.default-form textarea  {
+    flex: 1;
+    height: 4.5rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    border: none;
+} 
+
+.default-form input[type="file"] {
+    color: white;
+}
+trix-toolbar, 
+trix-editor {
+    background-color: white!important;
+}
+trix-toolbar {
+    padding: 1rem;
+}
+trix-editor {
+    font-size: 1.8rem;
+    min-height: 30rem!important;
+    padding: 2rem;
+}
+trix-editor h1, 
+trix-editor blockquote {
+    color: black;
+}
+trix-toolbar .trix-button-group {
+    margin-bottom: 0;
+}
+trix-toolbar .trix-button--icon-strike {
+    display: none;
+}
+.campo.descripcion {
+    display: flex;
+    align-items: flex-start;
+}
+
+.campo.descripcion label {
+    margin-right: 2rem;
+    margin-bottom: 0;
+    flex: 0 0 20%;
+}
+
+.campo.descripcion .trix-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.campo.descripcion trix-editor,
+.campo.descripcion trix-toolbar {
+    width: 100%;
+}
+.default-form input[type="submit"] {
+    margin-top: 2rem;
+}
+.default-form input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.default-form .acciones {
+    display: flex;
+    justify-content: space-between;
+}
+.default-form a {
+    color: #8094A3;
+    text-decoration: none;
+}
+
+.lista-conocimientos {
+    list-style: none;
+    padding: 0;    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.lista-conocimientos  li {
+    border: 2px solid #00C897;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    flex: 0 0 calc( 50% - 1rem);
+    text-align: center;
+    border-radius: 1rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lista-conocimientos  li.activo {
+    background-color: #00C897;
+}
+.lista-conocimientos  li:hover {
+    cursor: pointer;
+}
+
+@media (min-width:480px) {
+    .lista-conocimientos li {
+        flex: 0 0 calc( 33% - 1rem);
+    }
+}
+@media (min-width:768px) {
+    .lista-conocimientos li {
+        flex: 0 0 calc( 25% - 1rem);
+    }
+}
+@media (min-width:992px) {
+    .lista-conocimientos li {
+        flex: 0 0 calc( 20% - 1rem);
+    }
+}
+
+/** Admin **/
+
+p.candidatos {
+    font-weight: 400;
+    color: white;
+    display: block;
+    font-size: 1.8rem;
+    margin: 1rem 0 0 0;
+    text-align: left!important;
+    text-decoration: none;
+    color: #616065;
+}
+.admin-perfil {
+    width: 120px;
+    align-self: flex-start;
+    margin-right: 1rem;
+}
+.cerrar-sesion p{
+    margin:  0 2.5rem;
+    color: #8094A3;
+    text-align: center;
+}
+.cerrar-sesion {
+    margin-top: 0;
+    align-items: center;
+    display: flex;
+}   
+
+.cerrar-sesion img {
+    width: auto;
+    margin-bottom: 0.5rem;
+}
+
+.perfil-usuario {
+    text-align: center;
+}
+
+.perfil-usuario img {
+    display: block;
+    margin: 0 auto;
+    width: 80px; /* Ajusta el tamaño según necesites */
+    height: 80px;
+    border-radius: 50%;
+}
+
+.botones {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 2rem 0 5rem 0;
+    margin-bottom: 5rem;
+}
+.botones a {
+    margin-right: 2rem;
+}
+.lista-candidatos p,
+.lista-vacantes p {
+    color: white;
+    text-align: center;
+}
+
+#titulo-lista{
+    margin-top: 5rem;
+}
+/** Alertas **/
+.swal2-popup {
+    width: 60rem!important;
+}
+.swal2-popup .swal2-title {
+    font-size: 3.4rem!important;
+}
+.swal2-content {
+    font-size: 2rem!important;
+}
+.swal2-popup .swal2-styled.swal2-cancel,
+.swal2-popup .swal2-styled.swal2-confirm {
+    font-size: 2rem!important;
+}
+
+/** Flash Messages **/
+.alertas {
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 65px;
+}
+.alerta {
+    padding: 1rem 3rem; 
+    color: white;
+    font-size: 2.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: .3rem;
+}
+.correcto {
+    background-color: #00C897;
+}
+.error {
+    background-color: #C80045;
+}
+.desaparecer {
+    opacity: 0;
+}
+
+
+
+/** Biografia Vacante **/
+.info-reclutador h2 {
+    color: #8094A3;
+    font-size: 2.4rem;
+}
+.info-reclutador img {
+    max-width: 300px;
+    width: 100%;
+}
+.datos-reclutador {
+    border-top: 3px solid #22637A;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+.datos-reclutador p {
+    font-size: 2.4rem;
+    color: white;
+}
+@media (min-width:768px){
+    .enviar-datos {
+        flex: 0 0 calc(70% - 1rem);
+    }
+    .info-reclutador {
+        flex: 0 0 calc(30% - 1rem );
+    }
+}
+.enviar-datos h2 {
+    font-size: 4rem;
+    color: white;
+}
+.enviar-datos p {
+    color: white;
+    font-size: 1.8rem;
+}
