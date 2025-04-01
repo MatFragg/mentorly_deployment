@@ -3,7 +3,7 @@
 Mentorly es una plataforma web diseñada para conectar a personas que buscan trabajo en tecnología con ofertas laborales del sector. Su objetivo es facilitar la búsqueda de empleo en áreas como desarrollo de software, diseño UX/UI, análisis de datos, entre otras, a través de una interfaz simple y eficiente.
 
 ## 🚀 Cómo Utilizar la Web?
-- Ingresa al siguiente Enlace: https://mentorly-deployment.onrender.com
+- Ingresa al siguiente Enlace: https://mentorly-deployment-24mv.onrender.com
 
 - Para acceder a Mentorly , coloca las siguientes credenciales
     - email:test@gmail.com
